@@ -9,26 +9,25 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 20px;
-            background-color: #f7f7f7;
             color: #333;
-
-            background-image: url('p4.jpg'); /* 图片路径改为相对路径 */
-            background-size: cover; /* 使背景图片覆盖整个页面 */
-            background-position: center center; /* 居中显示背景图片 */
-            background-repeat: no-repeat; /* 防止背景图片重复 */
+            position: relative;
+            background-color: #f7f7f7; /* Fallback color */
         }
-        /* 添加一个半透明的遮罩层 */
+
+        /* Semi-transparent background image using pseudo-element */
         body::before {
-            content: "";
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('p4.jpg') no-repeat center center fixed; /* 设置背景图片 */
-            background-size: cover; /* 使背景图片覆盖整个页面 */
-            opacity: 0.4; /* 设置透明度为40% */
-            z-index: -1; /* 确保背景图片在内容层下面 */
+            right: 0;
+            bottom: 0;
+            background-image: url('p4.jpg');
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            opacity: 0.5; /* Adjust opacity to 50% */
+            z-index: -1; /* Ensure it stays in the background */
         }
         h1, h2, h3 {
             color: black;
